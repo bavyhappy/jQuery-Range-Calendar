@@ -106,10 +106,12 @@ $.fn.rangeCalendar = function(options) {
 		    var startDate = moment().add('days', startDateIndex.index() + obj.start);
 		       
 		    var range = $.data( obj, "range", {
-						    	start: startDateFormatted,
-								end: endDateFormatted,
-								width: obj.rangeWidth(),
-								fromNow: startDate.fromNow()     
+                        start: startDateFormatted,
+                        end: endDateFormatted,
+                        start_date: startDateTime,
+                        end_date: endDateTime,
+                        width: obj.rangeWidth(),
+                        fromNow: startDate.fromNow()     
 		    });
 		    return range;
 		},
